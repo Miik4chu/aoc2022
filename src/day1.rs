@@ -21,7 +21,7 @@ pub fn part2(input: &str) -> u32 {
     calories.sort();
     calories.reverse();
 
-    calories[0] + calories[1] + calories[2]
+    calories.into_iter().take(3).sum()
 }
 
 #[cfg(test)]
