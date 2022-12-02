@@ -19,9 +19,8 @@ pub fn part2(input: &str) -> u32 {
     let mut calories = parse_input(input);
 
     calories.sort();
-    calories.reverse();
 
-    calories.into_iter().take(3).sum()
+    calories.into_iter().rev().take(3).sum()
 }
 
 #[cfg(test)]
